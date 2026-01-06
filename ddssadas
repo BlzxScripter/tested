@@ -1,0 +1,32 @@
+--[[
+🔒 Ducke Obfuscator
+🔒 XOR + Base64 Style Dump
+🔒 Funciona no Roblox
+]]
+
+return (function(...)
+    local BcKDQvMETd = {
+        "\112\114\105\110\116\040\034\079\098\102\117\",
+        "115\099\097\100\111\114\032\080\101\103\111\1",
+        "17\034\041"
+    }
+
+    local function QxHBzugvMY()
+        return table.concat(BcKDQvMETd)
+    end
+
+    local function dGZmqWlCkn(s)
+        return (s:gsub("\\(%d%d%d)", function(n)
+            return string.char(tonumber(n))
+        end))
+    end
+
+    local CsCKyrKXfp = loadstring(dGZmqWlCkn(QxHBzugvMY()))
+
+    local ropCUTFtFh = (getfenv and getfenv(0)) or _G
+    if setfenv then
+        setfenv(CsCKyrKXfp, ropCUTFtFh)
+    end
+
+    return CsCKyrKXfp(...)
+end)()
